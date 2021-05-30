@@ -1,0 +1,275 @@
+body{
+    background-color: #e2e1e0;
+    font-family:Volkhov;
+}
+
+.blocks{
+    background-color: white;
+    height: auto;
+    min-height: 200px;
+    height: 350px;
+    /*width: 700px;*/
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 18.5px;
+}
+.row{
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+    justify-content: center;
+}
+
+#mainpanel{
+    padding-top: 130px;
+    padding: 60px;
+    background-color: #FF6766 ;
+}
+
+.btn{
+    margin-top: 10px;
+    border-radius: 0px;
+    font-size: 25px;
+}
+.btn:focus{
+    outline: none;
+}
+#gno{
+    border-radius: 50px;
+    width: 70%;
+}
+
+.badge{
+    font-size: 20px;
+    border-radius: 500px;
+}
+#reset{
+    margin-left: -120px;
+}
+#guess-label{
+    right: 65px; 
+}
+#header{
+    margin-top: 30px;
+}
+
+
+/*HINT SWITCH*/
+ #hintpanel{
+    width: 30%;
+ }
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/*HINT SWITCH*/
+
+
+
+/*DIFFICULTY RADIO*/
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    padding-right: 200px;
+    margin-left: 40%;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+/*DIFFICULTY RADIO*/
+
+.hbox{
+    margin-top:2%;
+    right: 5%;
+}
+
+
+@media only screen and (max-width: 900px) { 
+.container-fluid{     
+    padding-right: 0px; 
+    padding-left: 0px;
+}
+#header-container{
+    display: flex;
+    flex-direction: column;
+}
+#header{
+    margin-top: 5px;
+    margin-left: 12%;
+    display: flex;
+    flex-direction: column;
+}
+#diffchoose{
+    display: flex;
+    padding:5%;
+    gap: 50%;
+}
+#guess-container{
+    display: flex;
+    flex-flow: column;
+}
+#guesspanel{
+    width: 100%;
+}
+#mainpanel{
+    width:100%;
+    padding: 3%;
+}
+#hintpanel{
+    width:100%;
+    min-height: 25vh;
+}
+.blocks{
+    height: 5%;
+    min-height: 5%;
+    margin:0px;
+}
+.container{
+    margin-left: 0%;
+    margin-left: 0%;
+    font-size: 3vw;
+    padding-left: 0px;
+    padding-right: 30px;
+}
+.checkmark{
+    left: -30px;
+}
+#reset{
+    margin-left: 0px;
+}
+#resetbtn{
+    width: 100%;
+}
+#guess-label{
+    margin: 0 auto;
+    right: 0px;
+}
+h1, h2, h3{
+    font-size: 3vw;
+    font-weight: 900;
+}
+h2{
+    font-size: 4vw;
+    font-weight: 900;
+}
+.h1{
+    font-size: 2rem;
+}
+.btn{
+    width:100%;
+}
+.hbox{
+    margin-top: 1%;
+    right: 0%;
+    margin: 0 auto;
+    min-width: 90px;
+}
+#gno{
+    text-align: center;
+    height: auto;
+}
