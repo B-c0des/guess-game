@@ -74,7 +74,6 @@ $(document).ready(function () {
         max.html(maxstr);
     });
     
-    
     let end=false;
     let nog=10;
     let count=0;
@@ -85,9 +84,7 @@ $(document).ready(function () {
 
         if(String(gval)!=''&&count<10&&end==false) {
         	$('.hbox').hide();
-            $('#header-container').hide();
-        
-
+        $('#diffchoose').hide();
         count++;
 
         if(gval<rand){
